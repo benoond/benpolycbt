@@ -1137,8 +1137,18 @@
      
 
         // --- Application Tracking Properties ---
-        let currentQuestionIndex = 0; 
+        //let currentQuestionIndex = 0; 
+        //const totalQuestionsCount = questionsDataset.length;
+
+        // Shuffle questions
+        questionsDataset = questionsDataset.sort(() => Math.random() - 0.5);
+        
+        // Keep only 20 questions
+        questionsDataset = questionsDataset.slice(0, 20);
+        
+        let currentQuestionIndex = 0;
         const totalQuestionsCount = questionsDataset.length;
+        
         let totalSeconds = (20 * 60) + 0;
         let timerInterval = null;
         let isExamActive = false;

@@ -1137,7 +1137,7 @@
      
 
         // --- Application Tracking Properties ---
-        function shuffleArray(array) {
+       function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
@@ -1149,8 +1149,8 @@
         
         // Keep only 20 questions
         questionsDataset = questionsDataset.slice(0, 20);
-        
-        let currentQuestionIndex = 0; 
+
+        let currentQuestionIndex = 0;
         const totalQuestionsCount = questionsDataset.length;
         
         let totalSeconds = (20 * 60) + 0;
